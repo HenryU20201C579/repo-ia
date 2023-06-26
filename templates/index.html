@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  border: 1px solid green;
+  border-radius: 2rem;
+  margin: 2rem;
+}
+
+#sign-up .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+input {
+  min-width: 17rem;
+  width: 100%;
+  border: 1px solid blue;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+#submit {
+  border: 0;
+  background-color: yellow;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <section id="sign-up">
+  <div class="section-content">
+    <h2>Ingresa un texto de ejemplo.</h2>
+    <form  id="form" action="/mostrar" method="post">
+      <input name="text" id="text" type="text" placeholder="Ingresa tu texto de ejemplo" required>
+      <input id="submit" type="submit" value="Enviar" class="btn">
+    </form>
+  </div>
+  <div>{{text}}</div>
+</section>
+</body>
+</html>
